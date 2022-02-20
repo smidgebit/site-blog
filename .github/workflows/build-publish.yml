@@ -9,7 +9,7 @@ jobs:
   build-publish:
     runs-on: ubuntu-latest
     steps:
-    - uses:  totaldebug/action-sphinx@v2
+    - uses:  totaldebug/sphinx-publish-action@1.2.0
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
         sphinx_src: "source"
