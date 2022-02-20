@@ -4,12 +4,7 @@
 # You may wish to alter this file to override the set of languages analyzed,
 # or to provide custom queries or build logic.
 #
-# ******** NOTE ********
-# We have attempted to detect the languages in your repository. Please check
-# the `language` matrix defined below to confirm you have the correct set of
-# supported CodeQL languages.
-#
-name: "CodeQL"
+name: "code-ql"
 
 on:
   push:
@@ -22,7 +17,7 @@ on:
 
 jobs:
   analyze:
-    name: Analyze
+    name: analyze
     runs-on: ubuntu-latest
     permissions:
       actions: read
@@ -37,18 +32,11 @@ jobs:
         # Learn more about CodeQL language support at https://git.io/codeql-language-support
 
     steps:
-    - name: Checkout repository
+    - name: checkout repository
       uses: actions/checkout@v2
 
-    # install python and requirements
-    - uses: actions/setup-python@v2
-      with:
-        python-version: '3.9.x'
-    - run: |
-        pip install -r source/requirements.txt
-
     # Initializes the CodeQL tools for scanning.
-    - name: Initialize CodeQL
+    - name: initialize code-ql
       uses: github/codeql-action/init@v1
       with:
         languages: ${{ matrix.language }}
@@ -57,20 +45,17 @@ jobs:
         # Prefix the list here with "+" to use these queries and those in the config file.
         # queries: ./path/to/local/query, your-org/your-repo/queries@main
 
-    # Autobuild attempts to build any compiled languages  (C/C++, C#, or Java).
-    # If this step fails, then you should remove it and run the build manually (see below)
-    # - name: Autobuild
-    #  uses: github/codeql-action/autobuild@v1
+    # setup build dependencies
+    - uses: actions/setup-python@v2
+      with:
+        python-version: '3.9.x'
+    - run: |
+        pip install -r source/requirements.txt
 
-    # ℹ️ Command-line programs to run using the OS shell.
-    # 📚 https://git.io/JvXDl
-
-    # ✏️ If the Autobuild fails above, remove it and uncomment the following three lines
-    #    and modify them (or add more) to build your code if your project
-    #    uses a compiled language
-
+    # build the project
     - run: |
         make html
 
-    - name: Perform CodeQL Analysis
+    # scan
+    - name: perform code-ql analysis
       uses: github/codeql-action/analyze@v1
