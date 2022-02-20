@@ -12,6 +12,5 @@ jobs:
         python-version: "3.9.x"
     - run: |
         pip install -r source/requirements.txt
-    - uses: ammaraskar/sphinx-action@master
-      with:
-        docs-folder: "."
+    - run: |
+        make html
