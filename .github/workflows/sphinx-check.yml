@@ -14,4 +14,4 @@ jobs:
         pip install -r source/requirements.txt
     - uses: ammaraskar/sphinx-action@master
       with:
-        docs-folder: "source/"
+        docs-folder: "."
