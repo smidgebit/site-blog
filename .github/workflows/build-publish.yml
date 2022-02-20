@@ -9,6 +9,9 @@ jobs:
   build-publish:
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/checkout@v1
+      with:
+        fetch-depth: 0
     - uses:  totaldebug/sphinx-publish-action@1.2.0
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
