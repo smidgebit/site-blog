@@ -9,11 +9,6 @@ jobs:
   build-publish:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/setup-python@v2
-      with:
-        python-version: "3.9.x"
-    - run: |
-        pip install -r source/requirements.txt
     - uses:  totaldebug/action-sphinx@v2
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
