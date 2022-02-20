@@ -45,7 +45,7 @@ jobs:
       with:
         python-version: '3.9.x'
     - run: |
-        pip install -r source/requirements
+        pip install -r source/requirements.txt
 
     # Initializes the CodeQL tools for scanning.
     - name: Initialize CodeQL
