@@ -20,3 +20,4 @@ jobs:
         sphinx_src: "source"
         target_path: "docs"
         target_branch: "main"
+        cname: blog.smidgebit.com
