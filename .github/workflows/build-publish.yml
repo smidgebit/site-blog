@@ -23,7 +23,7 @@ jobs:
       run: |
         rm -rf docs
         mkdir docs
-        cp -R build/html/ docs/
+        cp -R build/html docs
         cp CNAME docs/CNAME
         touch docs/.nojekyll
     - name: commit docs
