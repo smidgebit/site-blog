@@ -15,11 +15,18 @@ jobs:
     - uses: actions/setup-python@v2
       with:
         python-version: "3.9.x"
-    - run: |
+    - name: build
+      run: |
         pip install -r source/requirements.txt
         make html
+    - name: copy to docs
+      run: |
         rm -rf docs
         mkdir docs
         cp -R build/html/ docs/
         cp CNAME docs/CNAME
         touch docs/.nojekyll
+    - name: commit docs
+      run: |
+        git add .
+        git commit -m "publish new build"
