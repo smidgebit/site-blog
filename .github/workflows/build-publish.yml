@@ -33,3 +33,4 @@ jobs:
 
         git add .
         git commit -m "publish new build"
+        git push origin main
