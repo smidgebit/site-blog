@@ -12,10 +12,14 @@ jobs:
     - uses: actions/checkout@v1
       with:
         fetch-depth: 0
-    - uses:  totaldebug/sphinx-publish-action@1.2.0
+    - uses: actions/setup-python@v2
       with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        sphinx_src: "source"
-        target_path: "docs"
-        target_branch: "main"
-        cname: blog.smidgebit.com
+        python-version: "3.9.x"
+    - run: |
+        pip install -r source/requirements.txt
+        make html
+        rm -rf docs
+        mkdir docs
+        cp -R build/html/ docs/
+        cp CNAME docs/CNAME
+        touch docs/.nojekyll
