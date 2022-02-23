@@ -1,4 +1,4 @@
 sphinx==4.4.0
 myst-parser==0.17.0
 ghp-import==2.0.2
-sphinx-documatt-theme
+pydata-sphinx-theme==0.8.0
