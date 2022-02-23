@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>blog.smidgebit.com</id>
+  <title>SmidgeBit</title>
+  <updated>2022-02-23T05:48:59.151595+00:00</updated>
+  <link href="blog.smidgebit.com"/>
+  <link href="blog.smidgebit.com/archive/atom.xml" rel="self"/>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.23">ABlog</generator>
+  <entry>
+    <id>blog.smidgebit.com/posts/0001-hello-world.html</id>
+    <title>hello world</title>
+    <updated>2022-02-22T00:00:00+00:00</updated>
+    <author>
+      <name>Ben Wart</name>
+    </author>
+    <content type="html">&lt;section id="hello-world"&gt;
+
+&lt;p&gt;This is the first post.&lt;/p&gt;
+&lt;section id="section-2"&gt;
+&lt;h2&gt;section 2&lt;/h2&gt;
+&lt;/section&gt;
+&lt;section id="section-3"&gt;
+&lt;h2&gt;section 3&lt;/h2&gt;
+&lt;p&gt;Just a little bit more.&lt;/p&gt;
+&lt;/section&gt;
+&lt;/section&gt;
+</content>
+    <link href="blog.smidgebit.com/posts/0001-hello-world.html" rel="alternate"/>
+    <summary>This is the first post.</summary>
+    <category term="hello" label="hello"/>
+    <category term="world" label="world"/>
+    <category term="init" label="init"/>
+    <published>2022-02-22T00:00:00+00:00</published>
+  </entry>
+</feed>
