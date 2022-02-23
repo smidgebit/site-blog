@@ -12,8 +12,15 @@ Welcome to SmidgeBit's documentation
 
    posts/0001-hello-world.md
 
-Indices and tables
-==================
-
-* :ref:`modindex`
-* :ref:`search`
+.. postlist:: 5
+   :author: Ahmet
+   :category: Manual
+   :location: Pittsburgh
+   :language: en
+   :tags: tips
+   :date: %A, %B %d, %Y
+   :format: {title}
+   :list-style: circle
+   :excerpts:
+   :sort:
+   :expand: Read more ...
