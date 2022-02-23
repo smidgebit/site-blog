@@ -10,7 +10,7 @@ Welcome to SmidgeBit's documentation
    :maxdepth: 2
    :caption: Contents:
 
-   stories/0001-hello-world.md
+   posts/0001-hello-world.md
 
 Indices and tables
 ==================

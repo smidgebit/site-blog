@@ -14,6 +14,10 @@ help:
 
 .PHONY: help Makefile
 
+# Use sphinx autobuild to re-build on file changes
+livehtml:
+	sphinx-autobuild -a --port=0 --open-browser "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+
 # Catch-all target: route all unknown targets to Sphinx using the new
 # "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).
 %: Makefile
