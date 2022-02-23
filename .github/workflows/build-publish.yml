@@ -8,6 +8,7 @@ on:
 jobs:
   build-publish:
     runs-on: ubuntu-latest
+
     steps:
     - uses: actions/checkout@v2
       with:
@@ -19,16 +20,9 @@ jobs:
       run: |
         pip install -r source/requirements.txt
         make html
-    - name: copy to docs
+    - name: publish
+      env:
+        GIT_COMMITTER_NAME: $GITHUB_ACTOR
+        GIT_COMMITTER_EMAIL: "<>"
       run: |
-        rm -rf docs
-        cp -R build/html/ docs/
-        cp CNAME docs/CNAME
-        touch docs/.nojekyll
-    - name: commit docs
-      run: |
-        git config user.name "GitHub Actions Bot"
-        git config user.email "<>"
-        git add .
-        git commit -m "publish new build" || true
-        git push origin main || true
+        ghp-import -n -c blog.smidgebit.com -m "publish spinx html to gh-pages" -p -o
