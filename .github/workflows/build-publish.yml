@@ -18,7 +18,7 @@ jobs:
         python-version: "3.9.x"
     - name: build
       run: |
-        pip install -r source/requirements.txt
+        pip install -r requirements.txt
         make html
     - name: publish
       env:
