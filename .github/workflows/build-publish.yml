@@ -25,4 +25,4 @@ jobs:
         GIT_COMMITTER_NAME: $GITHUB_ACTOR
         GIT_COMMITTER_EMAIL: "<>"
       run: |
-        ghp-import -n -c blog.smidgebit.com -m "publish spinx html to gh-pages" -p -o
+        ghp-import -n -c blog.smidgebit.com -m "publish spinx html to gh-pages" -p -o build/html
