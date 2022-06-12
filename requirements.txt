@@ -1,4 +1,4 @@
-sphinx==4.4.0
+sphinx==4.5.0
 sphinx-autobuild==2021.3.14
 sphinx-gitstamp==0.3.2
 ablog==0.10.23
