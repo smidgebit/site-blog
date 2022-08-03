@@ -1,7 +1,7 @@
 sphinx==4.4.0
 sphinx-autobuild==2021.3.14
 sphinx-gitstamp==0.3.2
-ablog==0.10.23
+ablog==0.10.28
 myst-parser==0.17.0
 pydata-sphinx-theme==0.8.0
 ghp-import==2.0.2
